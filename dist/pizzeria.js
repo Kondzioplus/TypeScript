@@ -1,5 +1,8 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Pizzeria = void 0;
 //tworzymy klasę
+//export modułów
 class Pizzeria {
     constructor(name) {
         this.pizzasInOrder = [];
@@ -24,24 +27,5 @@ class Pizzeria {
         return this.pizzasInOrder.length > this.maxPizzasInOven;
     }
 }
+exports.Pizzeria = Pizzeria;
 Pizzeria.id = 0;
-class PolishPizzeria extends Pizzeria {
-    bake() {
-        return 'pizza is being baked';
-    }
-}
-;
-class AmericanPizzeria extends Pizzeria {
-    bake() {
-        return 'pizza is being baked..please wait';
-    }
-}
-;
-const laStrada = new PolishPizzeria("LaStrada");
-laStrada.order("Havanian Pizza");
-//nadpisywanie Managera
-laStrada.manager;
-laStrada.manager = 'Jola Nowak';
-const americanHouse = new PolishPizzeria('American House');
-const venezia = new PolishPizzeria('Venezia');
-console.log(laStrada, americanHouse, venezia);
