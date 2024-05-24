@@ -1,7 +1,7 @@
 export interface Pizza {
     name: string;
     price: number | string;// Union Type (LUB "|").
-    size: string;
+    size: Size;
     status: Status;
 }
 

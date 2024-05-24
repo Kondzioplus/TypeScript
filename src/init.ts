@@ -1,7 +1,7 @@
 //import modułów
 import { PolishPizzeria } from "./polish-pizzeria";
 import { AmericanPizzeria } from "./american-pizzeria";
-import { Status } from "./pizza.model";
+import { Size, Status } from "./pizza.model";
 
 const laStrada = new PolishPizzeria("LaStrada", true);
 const americanHouse = new AmericanPizzeria('American House');
@@ -12,7 +12,7 @@ const isOvenInVeneziaFull = venezia.isOvenFull();
 const capriciosa = {
     name: 'Capriciosa',
     price: '21.00zł',
-    size: 'large',
+    size: 'large' as Size,//operator AS pozwala nam zmienić właściwość ręcznie.
     status: Status.Ordered,
     cancelable: true
 }

@@ -11,7 +11,7 @@ const isOvenInVeneziaFull = venezia.isOvenFull();
 const capriciosa = {
     name: 'Capriciosa',
     price: '21.00zł',
-    size: 'large',
+    size: 'large', //operator AS pozwala nam zmienić właściwość ręcznie.
     status: pizza_model_1.Status.Ordered,
     cancelable: true
 };
