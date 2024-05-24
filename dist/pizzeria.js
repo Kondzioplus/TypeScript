@@ -20,6 +20,14 @@ class Pizzeria {
     set manager(manager) {
         this._manager = manager;
     }
+    //Discriminated Unions - potrafią określić jakiego typu jest zmienna.
+    getPaymentMethod(payment) {
+        switch (payment.type) {
+            case 'cash': return `Paid in cash in ${payment.currency}`;
+            case 'debitCard': return `Paid with debit card with code ${payment.code}`;
+            case 'onlinePayment': return `Paid online, with bank account ${payment.bankAccount}`;
+        }
+    }
     order(pizza) {
         this.pizzasInOrder.push(pizza);
     }
