@@ -1,8 +1,14 @@
 interface Item {
     name: string;
 }
+//Generyczny interfejs.
+interface ProductsQueue<T> {
+    push(item: T): void;
+    getAll(): T[];
+}
+
 //Typ generyczny
-class Queue<T extends Item> {
+class Queue<T extends Item> implements ProductsQueue<T> {
     private data: T[] = [];
     push(item: T) {
         this.data.push(item);
@@ -10,6 +16,10 @@ class Queue<T extends Item> {
 
     pop() {
         this.data.shift();
+    }
+
+    getAll() {
+        return this.data;
     }
 }
 

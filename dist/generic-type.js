@@ -10,6 +10,9 @@ class Queue {
     pop() {
         this.data.shift();
     }
+    getAll() {
+        return this.data;
+    }
 }
 //const people = new Queue<string>();
 //people.push("abc");
