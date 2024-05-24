@@ -12,7 +12,7 @@ const isOvenInVeneziaFull = venezia.isOvenFull();
 const capriciosa = {
     name: 'Capriciosa',
     price: '21.00zł',
-    size: 'large' as Size,//operator AS pozwala nam zmienić właściwość ręcznie.
+    size: 'large',
     status: Status.Ordered,
     cancelable: true
 }
@@ -20,3 +20,4 @@ const capriciosa = {
 venezia.order(capriciosa);
 americanHouse.order(capriciosa);
 venezia.changeStatus(0, Status.Baked);
+venezia.changeSize(0, "small");

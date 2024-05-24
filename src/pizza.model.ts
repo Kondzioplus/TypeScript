@@ -1,7 +1,7 @@
 export interface Pizza {
     name: string;
     price: number | string;// Union Type (LUB "|").
-    size: Size;
+    size: string;
     status: Status;
 }
 
@@ -16,3 +16,5 @@ export enum Size {
     medium = 'medium',
     large = 'large'
 }
+// Type, keyof, typeof
+export type SizeKey = keyof typeof Size;// 'small', 'medium', 'large'.

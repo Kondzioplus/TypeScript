@@ -23,8 +23,13 @@ class Pizzeria {
     order(pizza) {
         this.pizzasInOrder.push(pizza);
     }
+    //zmiana statusu
     changeStatus(index, status) {
         this.pizzasInOrder[index].status = status;
+    }
+    //zmiana rozmiaru
+    changeSize(index, size) {
+        this.pizzasInOrder[index].size = size;
     }
     isOvenFull() {
         return this.pizzasInOrder.length > this.maxPizzasInOven;
