@@ -1,6 +1,6 @@
 //tworzymy klasę
 
-class Pizzeria {
+abstract class Pizzeria {
     static id = 0;
     id;
     readonly name;
@@ -27,14 +27,27 @@ class Pizzeria {
     private isOvenFull() {
         return this.pizzasInOrder.length > this.maxPizzasInOven;
     }
+    abstract bake()
 }
 
-const laStrada = new Pizzeria("LaStrada");
+class PolishPizzeria extends Pizzeria {
+    bake() {
+        return 'pizza is being baked';
+    }
+};
+
+class AmericanPizzeria extends Pizzeria {
+    bake() {
+        return 'pizza is being baked..please wait';
+    }
+};
+
+const laStrada = new PolishPizzeria("LaStrada");
 laStrada.order("Havanian Pizza");
 //nadpisywanie Managera
 laStrada.manager;
 laStrada.manager = 'Jola Nowak';
 
-const americanHouse = new Pizzeria('American House');
-const venezia = new Pizzeria('Venezia');
+const americanHouse = new PolishPizzeria('American House');
+const venezia = new PolishPizzeria('Venezia');
 console.log(laStrada, americanHouse, venezia);
