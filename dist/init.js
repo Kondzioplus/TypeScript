@@ -19,3 +19,4 @@ venezia.order(capriciosa);
 americanHouse.order(capriciosa);
 venezia.changeStatus(0, pizza_model_1.Status.Baked);
 venezia.changeSize(0, "small");
+console.log(venezia);

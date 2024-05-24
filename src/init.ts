@@ -21,3 +21,5 @@ venezia.order(capriciosa);
 americanHouse.order(capriciosa);
 venezia.changeStatus(0, Status.Baked);
 venezia.changeSize(0, "small");
+
+console.log(venezia);
