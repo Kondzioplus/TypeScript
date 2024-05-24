@@ -1,7 +1,7 @@
 "use strict";
+//tworzymy klasę
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Pizzeria = void 0;
-//tworzymy klasę
 //export modułów
 class Pizzeria {
     constructor(name) {

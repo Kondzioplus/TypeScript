@@ -1,10 +1,14 @@
 //tworzymy klasę
+
+import { Orderable } from "./orderable";
+import { Pizza } from "./pizza.model";
+
 //export modułów
-export abstract class Pizzeria {
+export abstract class Pizzeria implements Orderable {
     static id = 0;
     id;
     readonly name;
-    private pizzasInOrder: string[] = [];
+    pizzasInOrder: Pizza[] = [];
     private maxPizzasInOven = 10;
     protected recipes: string[] = [];
     private _manager = 'Jan Kowalski';
@@ -21,7 +25,7 @@ export abstract class Pizzeria {
     set manager(manager){
         this._manager = manager;
     }
-    order(pizza: string): void {
+    order(pizza: Pizza) {
         this.pizzasInOrder.push(pizza);
     }
     private isOvenFull() {
