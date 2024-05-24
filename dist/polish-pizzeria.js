@@ -8,6 +8,10 @@ class PolishPizzeria extends pizzeria_1.Pizzeria {
         super(name);
         this.openAtNight = openAtNight;
     }
+    //Intersection type. "&"(i).
+    order(pizza) {
+        this.pizzasInOrder.push(pizza);
+    }
     bake() {
         return 'pizza is being baked';
     }

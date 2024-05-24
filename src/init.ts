@@ -11,10 +11,12 @@ const isOvenInVeneziaFull = venezia.isOvenFull();
 
 const capriciosa = {
     name: 'Capriciosa',
-    price: 20.99,
+    price: '21.00zł',
     size: 'large',
-    status: Status.Ordered
+    status: Status.Ordered,
+    cancelable: true
 }
 
 venezia.order(capriciosa);
+americanHouse.order(capriciosa);
 venezia.changeStatus(0, Status.Baked);
