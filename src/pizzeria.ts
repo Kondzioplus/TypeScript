@@ -42,6 +42,8 @@ export abstract class Pizzeria implements Orderable {
             console.log('price is string', price.toLowerCase())
         } else if (typeof price === 'number') {
             console.log('price is number', price.toFixed());
+        } else {
+            console.log(price);// pole typu NEVER.
         }
     }
     isOvenFull() {
