@@ -23,6 +23,11 @@ function ClosedAtNight(constructor) {
         }
     };
 }
+function Enumerable(value) {
+    return function (target, propertyKey, propertyDescriptor) {
+        propertyDescriptor.enumerable = value;
+    };
+}
 let PolishPizzeria = class PolishPizzeria extends pizzeria_1.Pizzeria {
     constructor(name, openAtNight) {
         super(name);
@@ -37,6 +42,12 @@ let PolishPizzeria = class PolishPizzeria extends pizzeria_1.Pizzeria {
     }
 };
 exports.PolishPizzeria = PolishPizzeria;
+__decorate([
+    Enumerable(false),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", String)
+], PolishPizzeria.prototype, "bake", null);
 exports.PolishPizzeria = PolishPizzeria = __decorate([
     ClosedAtNight,
     PizzaCreated,

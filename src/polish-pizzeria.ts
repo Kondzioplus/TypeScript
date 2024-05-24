@@ -15,6 +15,13 @@ function ClosedAtNight<T extends {new(...args:any[]):{}}>(constructor: T) {
         openAtNight = false;
     }
 }
+
+function Enumerable(value: boolean) {
+    return function(target: any, propertyKey: string, propertyDescriptor: PropertyDescriptor) {
+        propertyDescriptor.enumerable = value;
+    }
+}
+
 @ClosedAtNight
 @PizzaCreated
 
@@ -28,6 +35,7 @@ export class PolishPizzeria extends Pizzeria {
         this.pizzasInOrder.push(pizza);
     }
 
+    @Enumerable(false)
     bake(): string {
         return 'pizza is being baked';
     }
