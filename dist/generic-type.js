@@ -21,4 +21,4 @@ class Queue {
 //numbers.push(456);
 //numbers.push(789);
 const ProductItems = new Queue();
-ProductItems.push({ id: 123, name: 'Milk' });
+ProductItems.push({ id: 123, name: 'Milk', code: 'AABB1122' });

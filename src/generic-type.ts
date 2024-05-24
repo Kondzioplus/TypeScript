@@ -1,6 +1,16 @@
 interface Item {
     name: string;
+    code: string;
 }
+//łączenie deklaracji interfejsu.
+//interface Item {
+//    name: string;
+//}
+//interface Item {
+//    code: string;
+//}
+// lepiej nie zostawiać deklaracji oddzielnie!!!.
+
 //Generyczny interfejs.
 interface ProductsQueue<T> {
     push(item: T): void;
@@ -25,7 +35,6 @@ class Queue<T extends Item> implements ProductsQueue<T> {
 
 interface ProductItem {
     id: number;
-    name: string;
 }
 
 //const people = new Queue<string>();
@@ -36,5 +45,5 @@ interface ProductItem {
 //numbers.push(456);
 //numbers.push(789);
 
-const ProductItems = new Queue<ProductItem>();
-ProductItems.push({ id: 123, name: 'Milk'});
+const ProductItems = new Queue<ProductItem & Item>();
+ProductItems.push({ id: 123, name: 'Milk', code: 'AABB1122'});
