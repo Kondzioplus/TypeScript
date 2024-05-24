@@ -1,7 +1,7 @@
 //tworzymy klasę
 
 import { Orderable } from "./orderable";
-import { Pizza } from "./pizza.model";
+import { Pizza, Status } from "./pizza.model";
 
 //export modułów
 export abstract class Pizzeria implements Orderable {
@@ -28,7 +28,11 @@ export abstract class Pizzeria implements Orderable {
     order(pizza: Pizza) {
         this.pizzasInOrder.push(pizza);
     }
-    private isOvenFull() {
+
+    changeStatus(index: number, status: Status) {
+        this.pizzasInOrder[index].status = status;
+    }
+    isOvenFull() {
         return this.pizzasInOrder.length > this.maxPizzasInOven;
     }
     abstract bake(): string;
