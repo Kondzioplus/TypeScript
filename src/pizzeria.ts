@@ -4,9 +4,9 @@ export abstract class Pizzeria {
     static id = 0;
     id;
     readonly name;
-    private pizzasInOrder = [];
+    private pizzasInOrder: string[] = [];
     private maxPizzasInOven = 10;
-    protected recipes = [];
+    protected recipes: string[] = [];
     private _manager = 'Jan Kowalski';
 
     constructor(name: string) {
@@ -21,13 +21,13 @@ export abstract class Pizzeria {
     set manager(manager){
         this._manager = manager;
     }
-    order(pizza) {
+    order(pizza: string): void {
         this.pizzasInOrder.push(pizza);
     }
     private isOvenFull() {
         return this.pizzasInOrder.length > this.maxPizzasInOven;
     }
-    abstract bake()
+    abstract bake(): string;
 }
 
 

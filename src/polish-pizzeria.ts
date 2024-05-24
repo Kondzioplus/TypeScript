@@ -2,10 +2,10 @@
 import { Pizzeria } from "./pizzeria";
 
 export class PolishPizzeria extends Pizzeria {
-    constructor(name, public openAtNight) {
+    constructor(name: string, public openAtNight: boolean) {
         super(name);
     }
-    bake() {
+    bake(): string {
         return 'pizza is being baked';
     }
 };
