@@ -10,9 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PolishPizzeria = void 0;
-//import modułów
+// import modułów
 const pizzeria_1 = require("./pizzeria");
-function PizzaCreated(target) {
+function PizzaCreated(_target) {
     console.log('Polish Pizza has been created...');
 }
 function ClosedAtNight(constructor) {
@@ -33,7 +33,7 @@ let PolishPizzeria = class PolishPizzeria extends pizzeria_1.Pizzeria {
         super(name);
         this.openAtNight = openAtNight;
     }
-    //Intersection type. "&"(i).
+    // Intersection type. "&"(i).
     order(pizza) {
         this.pizzasInOrder.push(pizza);
     }

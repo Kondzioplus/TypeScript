@@ -1,8 +1,8 @@
 "use strict";
-//tworzymy klasę
+// tworzymy klasę
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Pizzeria = void 0;
-//export modułów
+// export modułów
 class Pizzeria {
     constructor(name) {
         this.pizzasInOrder = [];
@@ -12,15 +12,15 @@ class Pizzeria {
         this.id = Pizzeria.id++;
         this.name = name;
     }
-    //getter
+    // getter
     get manager() {
         return this._manager;
     }
-    //setter
+    // setter
     set manager(manager) {
         this._manager = manager;
     }
-    //Discriminated Unions - potrafią określić jakiego typu jest zmienna.
+    // Discriminated Unions - potrafią określić jakiego typu jest zmienna.
     getPaymentMethod(payment) {
         switch (payment.type) {
             case 'cash': return `Paid in cash in ${payment.currency}`;
@@ -31,15 +31,15 @@ class Pizzeria {
     order(pizza) {
         this.pizzasInOrder.push(pizza);
     }
-    //zmiana statusu
+    // zmiana statusu
     changeStatus(index, status) {
         this.pizzasInOrder[index].status = status;
     }
-    //zmiana rozmiaru
+    // zmiana rozmiaru
     changeSize(index, size) {
         this.pizzasInOrder[index].size = size;
     }
-    //Typ Guards
+    // Typ Guards
     checkPrice({ price }) {
         if (typeof price === "string") {
             console.log('price is string', price.toLowerCase());

@@ -1,5 +1,5 @@
 "use strict";
-//Typ generyczny
+// Typ generyczny
 class Queue {
     constructor() {
         this.data = [];
@@ -14,11 +14,11 @@ class Queue {
         return this.data;
     }
 }
-//const people = new Queue<string>();
-//people.push("abc");
-//people.push("123");
-//const numbers = new Queue<number>();
-//numbers.push(456);
-//numbers.push(789);
+// const people = new Queue<string>();
+// people.push("abc");
+// people.push("123");
+// const numbers = new Queue<number>();
+// numbers.push(456);
+// numbers.push(789);
 const ProductItems = new Queue();
 ProductItems.push({ id: 123, name: 'Milk', code: 'AABB1122' });

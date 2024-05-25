@@ -1,7 +1,7 @@
 "use strict";
 // Typ Never.
 const showError = (message) => {
-    throw new Error(message); //brak returna = typ never.
+    throw new Error(message); // brak returna = typ never.
 };
 const showErrors = () => {
     while (true) {

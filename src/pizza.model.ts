@@ -6,9 +6,9 @@ export interface Pizza {
 }
 
 export enum Status {
-    Ordered,//0
-    Baked,//1
-    Sold//2
+    Ordered,// 0
+    Baked,// 1
+    Sold// 2
 }
 
 export enum Size {
@@ -16,7 +16,7 @@ export enum Size {
     medium = 'medium',
     large = 'large'
 }
-// Type, keyof, typeof
+    // Type, keyof, typeof
 export type SizeKey = keyof typeof Size;// 'small', 'medium', 'large'.
 
 export interface Cash {

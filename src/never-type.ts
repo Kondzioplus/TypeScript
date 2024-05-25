@@ -1,7 +1,7 @@
-// Typ Never.
+    // Typ Never.
 
 const showError = (message: string) => {
-    throw new Error(message); //brak returna = typ never.
+    throw new Error(message); // brak returna = typ never.
 }
 
 const showErrors = () => {

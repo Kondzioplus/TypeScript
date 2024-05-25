@@ -1,4 +1,4 @@
-//import modułów
+    // import modułów
 import { PolishPizzeria } from "./polish-pizzeria";
 import { AmericanPizzeria } from "./american-pizzeria";
 import { Size, Status } from "./pizza.model";
@@ -21,5 +21,3 @@ venezia.order(capriciosa);
 americanHouse.order(capriciosa);
 venezia.changeStatus(0, Status.Baked);
 venezia.changeSize(0, "small");
-
-console.log(venezia);

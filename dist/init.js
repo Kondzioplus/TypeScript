@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-//import modułów
+// import modułów
 const polish_pizzeria_1 = require("./polish-pizzeria");
 const american_pizzeria_1 = require("./american-pizzeria");
 const pizza_model_1 = require("./pizza.model");
@@ -19,4 +19,3 @@ venezia.order(capriciosa);
 americanHouse.order(capriciosa);
 venezia.changeStatus(0, pizza_model_1.Status.Baked);
 venezia.changeSize(0, "small");
-console.log(venezia);

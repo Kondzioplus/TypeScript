@@ -1,4 +1,4 @@
-//import modułów
+    // import modułów
 import { Pizzeria } from "./pizzeria";
 import { Pizza, Status } from "./pizza.model";
 
@@ -6,7 +6,7 @@ interface CancelablePizza {
     cancelable: boolean;
 }
 
-function PizzaCreated(target: Function) {
+function PizzaCreated(_target: Function) {
     console.log('Polish Pizza has been created...');
 }
 
@@ -30,7 +30,7 @@ export class PolishPizzeria extends Pizzeria {
         super(name);
     }
 
-    //Intersection type. "&"(i).
+    // Intersection type. "&"(i).
     order(pizza: Pizza & CancelablePizza) {
         this.pizzasInOrder.push(pizza);
     }

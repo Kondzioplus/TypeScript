@@ -1,4 +1,4 @@
-//import modułów
+    // import modułów
 import { Pizzeria } from "./pizzeria";
 
 export class AmericanPizzeria extends Pizzeria {
